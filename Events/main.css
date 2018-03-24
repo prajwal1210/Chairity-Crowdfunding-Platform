@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'open sans', helvetica, arial, sans;
+  background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDw8NDQ0NDQ0NDxANDQ0NDQ8NDQ0NFRIWFhURFRUYHSggGBolGxUVIT0hJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NFg0KGisZFRkrLSsrKysrKysrKysrKy0rKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAABAgAFBwP/xAAuEAEBAQABAQUGBAcAAAAAAAAAAREC8AYhQZGhAxQxRFSCBDJRgQUHEjRxstL/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A8SLEGhBBixBjGhgNC0MgMqRjAaRiZAGHDhwE4cOHATjYrGwE4MXgwE4MVgBOCxWNQRYMXUgkKwUEhVAJBYEhQAAgCWYCQQYsQMMYwGioIoGMaKASKkaGAxxsOAMOHDgJxsVjYCcGKsbARgxYwEWBdgoIoxVAIsChQQFUUEhSQAUASxAEggTBCBIhAxUEVAaKEUBhkaGAZDI0hkBsOHCAaRWHAS2KxsBGNimBCcfRNgIoq7E0EWBdTQRRYqigihVTQSFJAAgAFAGIIGEQwDFCEFQwRUAxUTFQFQwRUAxUEVAZQisBsaQ4ZAThwsCbBiq168wQKoAipq6mgmpqqkE1NVRQTU1VTQSFJoCggACALMQaKghgFUTFAqGCKgGKiYqAqKiYqAqKghgFQUBnXmzdepgNGw51+zZ1+wJoqrACE1aaCamqooIqVVIJqaqpoCpqqmglNUKCaDQABAEgwDDBDAMVEqgKiomGAqKiYqApcQqAuGJioClJigV16mJ69TAVBWlbQFF68zRevMEgpoCoq6nkCaiqooIopqaAqaqpoJBFBNBAAEAWBgGKiTAUqJMBcMTFQFRURFQFxURFQFxURFQFlMMBc682idMoK69ANYDR16tU0GTTRQFTTamgKkpAVNNFAVNNTQCapIAEUACAYggYYDAKkwguGJioCoqIigVFJMBcqpUSmUFxSNOgvr1bUsC9A1tA0NaNBho0Wg1TTU0GqaakAKwoCppqaABSDBqAYEAxSQMIIFSSCoqJhgLhiZTAUqVCpQXDESmUF6dRpBemVGnQVrWp1rQVaNTraB1LaAaitRQFDUABWooCitRQAIAAgACAYggSkwCpJBUMSYCoqIUCjE6QXKZUHQXp1GnQVranToK1tTraB1tFo0Do0aNA0Wi1qDBrUg1FaigKKakGDMABFBgwBizAYQwEswExmAwlgbVazAY2swHTrMDa2lgbW1mBtGswMGYBorMA0MwChmB1Oz38E5/j/ac+HH2nH2c9nw/r5crxvO99yScZ8XdnYDnfm/j+v4Xn/wBMwC9gOf1Xhv8AbcvL8wvYHnLnvN8Z3fheVnd9zMAnYLn9VZ8PlOfj9zXsDz3Per32Tfdeed/j+b4MwNewHP6r9fluXh9y+P8ALvnZvvnGf59hyl/2Zgf/2Q==) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page-header{
+	color : #ffffff;
+}
+.row-striped:nth-of-type(odd){
+  background-color: #efefef;
+  border-left: 4px #000000 solid;
+}
+
+.row-striped:nth-of-type(even){
+  background-color: #ffffff;
+  border-left: 4px #efefef solid;
+}
+
+.row-striped {
+    padding: 15px 0;
+}
+
+body {
+    background-color: #000000;
+}
