@@ -56,7 +56,7 @@ session_start();
 
 <body>
 
-  <div class="log-form" style="overflow:scroll; height:300px; width:400px;">
+  <div class="log-form" style="height:300px; width:400px;">
   <h2>Create an account</h2>
                                           
   <form method="post" action="signup.php">

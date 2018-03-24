@@ -56,9 +56,17 @@ session_start();
   <form method="post" action="index.php">
     <input type="text" name="username" title="username" placeholder="Username" />
     <input type="password" name="password" title="password" placeholder="Password" />
-    <button type="submit" class="btn" name="login" value="Login">Login as User</button><br><br>
-    <a class="forgot" href="signup.php">Don't have an account? Create one.</a>
-    <br><br><a href="index.html" class="btn" style="text-decoration: none">Return to Home</a> 
+    <!-- <a class="forgot" href="signup.php">Don't have an account? Create one.</a> -->
+    <button type="submit" class="btn" name="login" value="Login" style="display: inline-block; float: left;font-size:0.9em;">Login User</button>
+    <button type="submit" class="btn" name="login" value="Login" style="display: inline-block; float: right;font-size:0.9em;">Login Organisation</button>
+    <a class="forgot" href="index.html" style="float: left; display: inline-block;">Return to Home</a>
+    <a class="forgot" href="signup.php" style="display: inline-block;">Don't have an account? Create one</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- <a href="index.html" class="btn" style="text-decoration: none">Return to Home</a>  -->
+    
   </form>
 </div><!--end log form -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

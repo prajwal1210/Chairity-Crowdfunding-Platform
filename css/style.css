@@ -12,7 +12,6 @@ body {
 }
 .log-form {
   width: 45%;
-  overflow-y:scroll;
   min-width: 320px;
   max-width: 475px;
   background: #fff;
@@ -25,6 +24,8 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+  border-radius:15px 15px 15px 15px;
 }
 @media (max-width: 40em) {
   .log-form {
@@ -56,6 +57,8 @@ body {
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.05);
   border: 1px solid #1d1d1d;
   margin: 0;
+  border-top-left-radius:15px;
+  border-top-right-radius: 15px;
   font-weight: 200;
 }
 .log-form input {
@@ -73,13 +76,14 @@ body {
   outline: none;
 }
 .log-form .btn {
-  display: inline-block;
+  /*display: inline-block;*/
   background: #1fb5bf;
   border: 1px solid #1ba0a9;
   padding: .5em 2em;
   color: white;
   margin-right: .5em;
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+
 }
 .log-form .btn:hover {
   background: #23cad5;
@@ -90,6 +94,7 @@ body {
 }
 .log-form .btn:focus {
   outline: none;
+
 }
 .log-form .forgot {
   color: #33d3de;
