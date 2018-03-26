@@ -41,7 +41,8 @@ session_start();
 
       $result = mysqli_query($conn,"SELECT * FROM User WHERE user_id = '$username'");
       if (mysqli_num_rows($result) == 0 && $password == $repassword){
-        $res = mysqli_query($conn,"INSERT INTO User values('$username','$password','$name','$gender','$dob','$house_no','$street','$city','$state',$pin,'$email',$wallet)");
+        $pass = md5($password);
+        $res = mysqli_query($conn,"INSERT INTO User values('$username','$pass','$name','$gender','$dob','$house_no','$street','$city','$state',$pin,'$email',$wallet)");
         $res1 = mysqli_query($conn,"INSERT INTO User_contact_no values('$username',$contact_no)");
         if (!empty($a_contact_no)) {
           $res2 = mysqli_query($conn,"INSERT INTO User_contact_no values('$username',$a_contact_no)");

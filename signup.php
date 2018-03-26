@@ -20,7 +20,8 @@ session_start();
 
     $result = mysqli_query($conn,"SELECT * FROM user_info WHERE username = '$username'");
     if (mysqli_num_rows($result) == 0 && $password == $repassword){
-      $res = mysqli_query($conn,"INSERT INTO user_info values('$username','$password')");
+      $pass = md5($password);
+      $res = mysqli_query($conn,"INSERT INTO user_info values('$username','$pass')");
       header("Location: account_created.php");
     } 
     else if(mysqli_num_rows($result) != 0){
@@ -58,11 +59,8 @@ session_start();
 
   <div class="log-form" style="height:300px; width:400px;">
   <h2>Create an account</h2>
-                                          
   <form method="post" action="signup.php">
-	
-	Choose Your Type<br>
-<br>
+	<h3>Choose Your Type</h3><br>
     <a href="signup1.php" class="btn">User</a><br/>
 <br>   <a href="signup2.php" class="btn">Organisation</a><br>
     <a class="forgot" href="index.php">Already have an account? Login.</a>

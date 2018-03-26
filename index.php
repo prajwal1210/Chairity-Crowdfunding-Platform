@@ -10,13 +10,30 @@ session_start();
         die("Connection failed: " . $conn->connect_error);
     } 
     $username = $_POST['username'];
+    $result = mysqli_query($conn,"SELECT * FROM User WHERE user_id = '$username'");
+    if (mysqli_num_rows($result) == 1){
+      while($row = mysqli_fetch_array($result)){
+        if($row['pass'] == md5($_POST['password'])){        
+          $_SESSION['loggedin']=true;
+          $_SESSION['id']=$username;
+          header('Location: Pro/index.php');
+        }
+      } 
+    } 
+  }
+  else if(isset($_POST['org-login'])&&isset($_POST['username'])&&isset($_POST['password'])){
+    $conn = mysqli_connect("localhost", "root", "demosql", "chairity");
+    if (!$conn) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    $username = $_POST['username'];
     $result = mysqli_query($conn,"SELECT * FROM Organization WHERE org_id = '$username'");
     if (mysqli_num_rows($result) == 1){
       while($row = mysqli_fetch_array($result)){
-        if($row['pass'] == $_POST['password']){        
+        if($row['pass'] == md5($_POST['password'])){        
           $_SESSION['loggedin']=true;
           $_SESSION['id']=$username;
-          header('Location: Profile/profile.php');
+          header('Location: Org/index.php');
         }
       } 
     } 
@@ -54,11 +71,11 @@ session_start();
   <div class="log-form">
   <h2>Login to your account</h2>
   <form method="post" action="index.php">
-    <input type="text" name="username" title="username" placeholder="Username" />
-    <input type="password" name="password" title="password" placeholder="Password" />
+    <input requried type="text" name="username" required="required" title="username" placeholder="Username" />
+    <input required type="password" name="password" required="required" title="password" placeholder="Password" />
     <!-- <a class="forgot" href="signup.php">Don't have an account? Create one.</a> -->
     <button type="submit" class="btn" name="login" value="Login" style="display: inline-block; float: left;font-size:0.9em;">Login User</button>
-    <button type="submit" class="btn" name="login" value="Login" style="display: inline-block; float: right;font-size:0.9em;">Login Organisation</button>
+    <button type="submit" class="btn" name="org-login" value="Org-Login" style="display: inline-block; float: right;font-size:0.9em;">Login Organisation</button>
     <a class="forgot" href="index.html" style="float: left; display: inline-block;">Return to Home</a>
     <a class="forgot" href="signup.php" style="display: inline-block;">Don't have an account? Create one</a>
     <br>

@@ -51,7 +51,8 @@ session_start();
       $description = $_POST['descr'];
       $result = mysqli_query($conn,"SELECT * FROM Organization WHERE org_id = '$username'");
       if (mysqli_num_rows($result) == 0 && $password == $repassword){
-        $res = mysqli_query($conn,"INSERT INTO Organization values('$username','$password','$name',$registration_no,'$bill_house_no','$bill_street','$bill_city','$bill_state',$bill_pin,'$description','$email','$ho_house_no','$ho_street','$ho_city','$ho_state',$ho_pin)");
+        $pass = md5($password);
+        $res = mysqli_query($conn,"INSERT INTO Organization values('$username','$pass','$name',$registration_no,'$bill_house_no','$bill_street','$bill_city','$bill_state',$bill_pin,'$description','$email','$ho_house_no','$ho_street','$ho_city','$ho_state',$ho_pin)");
         if($cat1 != '')
           $res = mysqli_query($conn,"INSERT INTO Organization_category values('$username','$cat1')");
         if($cat2 != '')
@@ -104,9 +105,9 @@ session_start();
 
 <body>
 
-  <div class="log-form" style="overflow:scroll; height:600px; width: 500px; padding:2em;">
+  <div class="log-form" style="overflow-y:scroll; height:600px; width: 500px; padding:0em;">
 
-  <h2>Create an account</h2>
+  <h2 style="border-radius: 0px 0px 0px 0px">Create an account</h2>
   <br/>
 
   <form method="post" action="signup2.php">

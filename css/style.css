@@ -4,7 +4,7 @@
 }
 body {
   font-family: 'open sans', helvetica, arial, sans;
-  background: url(http://www.lander.edu/images/default-source/news-releases-images/hands-art.jpg?sfvrsn=2) no-repeat center center fixed;
+  background: url('bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -77,16 +77,22 @@ body {
 }
 .log-form .btn {
   /*display: inline-block;*/
-  background: #1fb5bf;
-  border: 1px solid #1ba0a9;
+  /*background: #1fb5bf;*/
+  /*background:#252828;*/
+  /*background:#424444;*/
+  background:#252828;
+  border: 2px solid #252828;
   padding: .5em 2em;
   color: white;
   margin-right: .5em;
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  opacity: 0.8;
 
 }
 .log-form .btn:hover {
-  background: #23cad5;
+  background: white;
+  color: black;
 }
 .log-form .btn:active {
   background: #1fb5bf;
